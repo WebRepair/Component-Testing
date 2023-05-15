@@ -7,6 +7,7 @@ import Features from "~/components/features.astro";
 import Footer from "~/components/footer.astro";
 import Header from "~/components/header.astro";
 import Intro from "~/components/intro.astro";
+import New1 from "~/components/NEWcomponent1.astro";
 import Showcase from "~/components/showcase.astro";
 import Splash from "~/components/splash.astro";
 import "~/styles/index.css";
@@ -69,8 +70,10 @@ const Headline = "Simpler way of integrating text. (First Headline)"
     <Splash />
     <div class="space-y-24 px-8 py-32">
     
-
-      <ul class=" First Custom Component ">
+        
+      
+      <div class=""> <button id="firstButton" class=" ml-5 border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> First Basic Component for Json stuff </div>
+      <ul class=" FirstComponent border-2 border-black">
        <div class=" flex justify-center text-red-600 text-3xl"> {Headline} </div> 
         {
           data.map((data) => {
@@ -85,12 +88,204 @@ const Headline = "Simpler way of integrating text. (First Headline)"
       </ul>
 
 
-
+      <button id="secondButton" class=" ml-5 border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> Two buttons large text 
+      <div class=" secondComponent ">
       <Intro />
+      </div>
+
+
+      <br> <button id="thirdButton" class=" ml-5  border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> Astro Themes Features 
+      <div class=" thirdComponent ">
+      <New1 />
+      </div>
+
+
+      <br> <button id="fourthButton" class=" ml-5 border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> Features from Template
+      <div class=" fourthComponent ">
       <Features />
+      </div>
+      
+
+
+      <br> <button id="fifthButton" class=" ml-5 border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> Compatibility with frameworks
+      <div class=" fifthComponent ">
       <Compatibility />
+      </div>
+
+
+      <br> <button id="sixthButton" class=" ml-5 border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> Showcase 
+      <div class=" sixthComponent ">
       <Showcase />
+      </div>
+      
+
+
+
     </div>
     <Footer />
   </body>
 </html>
+
+
+
+<script>
+
+// Get the button and the element to toggle
+const toggleButton = document.getElementById('firstButton');
+const firstComponent = document.querySelector('.FirstComponent');
+
+
+// Define a function to handle the click event
+function toggleComponent() {
+  if (firstComponent?.style.display === 'none') {
+    firstComponent.style.display = 'block'; // Show the component
+    toggleButton.style.backgroundColor = '';
+  } else {
+    firstComponent.style.display = 'none'; // Hide the component
+    toggleButton.style.backgroundColor = 'grey'; // button color change
+  }
+}
+
+
+// Attach the click event to the button
+toggleButton.addEventListener('click', toggleComponent);
+
+
+
+
+// SECOND BUTTON
+
+
+
+
+const toggleButton2 = document.getElementById('secondButton');
+const firstComponent2 = document.querySelector('.secondComponent');
+
+
+// Define a function to handle the click event
+function toggleComponent2() {
+  if (firstComponent2?.style.display === 'none') {
+    firstComponent2.style.display = 'block'; // Show the component
+    toggleButton2.style.backgroundColor = '';
+  } else {
+    firstComponent2.style.display = 'none'; // Hide the component
+    toggleButton2.style.backgroundColor = 'grey'; // Hide the component
+  }
+}
+
+
+// Attach the click event to the button
+toggleButton2.addEventListener('click', toggleComponent2);
+
+
+
+// third BUTTON
+
+
+
+
+const toggleButton3 = document.getElementById('thirdButton');
+const firstComponent3 = document.querySelector('.thirdComponent');
+
+
+// Define a function to handle the click event
+function toggleComponent3() {
+  if (firstComponent3?.style.display === 'none') {
+    firstComponent3.style.display = 'block'; // Show the component
+    toggleButton3.style.backgroundColor = '';
+  } else {
+    firstComponent3.style.display = 'none'; // Hide the component
+    toggleButton3.style.backgroundColor = 'grey'; // Hide the component
+  }
+}
+
+
+// Attach the click event to the button
+toggleButton3.addEventListener('click', toggleComponent3);
+
+
+
+
+// fourth BUTTON
+
+
+
+
+const toggleButton4 = document.getElementById('fourthButton');
+const firstComponent4 = document.querySelector('.fourthComponent');
+
+
+// Define a function to handle the click event
+function toggleComponent4() {
+  if (firstComponent4?.style.display === 'none') {
+    firstComponent4.style.display = 'block'; // Show the component
+    toggleButton4.style.backgroundColor = '';
+  } else {
+    firstComponent4.style.display = 'none'; // Hide the component
+    toggleButton4.style.backgroundColor = 'grey'; // Hide the component
+  }
+}
+
+
+// Attach the click event to the button
+toggleButton4.addEventListener('click', toggleComponent4);
+
+
+
+
+// fifth BUTTON
+
+
+
+
+const toggleButton5 = document.getElementById('fifthButton');
+const firstComponent5 = document.querySelector('.fifthComponent');
+
+
+// Define a function to handle the click event
+function toggleComponent5() {
+  if (firstComponent5?.style.display === 'none') {
+    firstComponent5.style.display = 'block'; // Show the component
+    toggleButton5.style.backgroundColor = '';
+  } else {
+    firstComponent5.style.display = 'none'; // Hide the component
+    toggleButton5.style.backgroundColor = 'grey'; // Hide the component
+  }
+}
+
+
+// Attach the click event to the button
+toggleButton5.addEventListener('click', toggleComponent5);
+
+
+
+
+// sixth BUTTON
+
+
+
+
+const toggleButton6 = document.getElementById('sixthButton');
+const firstComponent6 = document.querySelector('.sixthComponent');
+
+
+// Define a function to handle the click event
+function toggleComponent6() {
+  if (firstComponent6?.style.display === 'none') {
+    firstComponent6.style.display = 'block'; // Show the component
+    toggleButton6.style.backgroundColor = '';
+  } else {
+    firstComponent6.style.display = 'none'; // Hide the component
+    toggleButton6.style.backgroundColor = 'grey'; // Hide the component
+  }
+}
+
+
+// Attach the click event to the button
+toggleButton6.addEventListener('click', toggleComponent6);
+</script>
+
+
+<style>
+
+</style>

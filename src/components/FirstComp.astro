@@ -1,0 +1,39 @@
+---
+export interface Props {
+    title: string;
+    subtext: string;
+}
+
+const { title, subtext } = Astro.props;
+
+
+
+const Headline = "Simpler way of integrating text. but appears twice. (Second Headline)"
+
+---
+
+
+
+<div class=" mt-20 mb-40"> 
+
+    <div class=" flex justify-center text-xl"> {Headline} </div>
+
+</div>
+
+
+
+
+
+
+<li class="FirstComp">
+
+    <h1 class=" flex justify-center pb-10 font-bold">
+        {title}
+    </h1>
+    
+    <h3 class=" flex justify-center p-5">
+         {subtext} 
+    </h3>
+  </li>
+
+

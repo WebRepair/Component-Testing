@@ -8,6 +8,7 @@ import Footer from "~/components/footer.astro";
 import Header from "~/components/header.astro";
 import Intro from "~/components/intro.astro";
 import New1 from "~/components/NEWcomponent1.astro";
+import New2 from "~/components/NEWcontactForm.astro";
 import Showcase from "~/components/showcase.astro";
 import Splash from "~/components/splash.astro";
 import "~/styles/index.css";
@@ -119,7 +120,10 @@ const Headline = "Simpler way of integrating text. (First Headline)"
       </div>
       
 
-
+      <br> <button id="seventhButton" class=" ml-5 border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> Cheeky Contact Form 
+      <div class=" seventhComponent ">
+      <New2 />
+      </div>
 
     </div>
     <Footer />
@@ -283,6 +287,35 @@ function toggleComponent6() {
 
 // Attach the click event to the button
 toggleButton6.addEventListener('click', toggleComponent6);
+
+
+
+
+
+
+// seventh BUTTON
+
+
+
+
+const toggleButton7 = document.getElementById('seventhButton');
+const firstComponent7 = document.querySelector('.seventhComponent');
+
+
+// Define a function to handle the click event
+function toggleComponent7() {
+  if (firstComponent7?.style.display === 'none') {
+    firstComponent7.style.display = 'block'; // Show the component
+    toggleButton7.style.backgroundColor = '';
+  } else {
+    firstComponent7.style.display = 'none'; // Hide the component
+    toggleButton7.style.backgroundColor = 'grey'; // Hide the component
+  }
+}
+
+
+// Attach the click event to the button
+toggleButton7.addEventListener('click', toggleComponent7);
 </script>
 
 

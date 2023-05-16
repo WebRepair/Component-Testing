@@ -1,0 +1,91 @@
+---
+import { Picture } from "@astrojs/image/components";
+const src =  "images/hero.png";
+import { Icon } from "astro-icon";
+
+
+const Headline = "Marketing website done with Astro"
+
+const bottomText = " Astroship is a starter template for startups, marketing websites & landing pages. Built with Astro.build and TailwindCSS. You can quickly create any website with this starter."
+
+const button1 = "Download for Free"
+
+const button2 = "GitHub Repo"
+
+
+interface Props {
+  href: string;
+  size?: "md" | "lg";
+  block?: boolean;
+  style?: "outline" | "primary" | "inverted" | "muted";
+  class?: string;
+  [x: string]: any;
+}
+
+const {
+  href,
+  block,
+  size = "lg",
+  style = "primary",
+  class: className,
+  ...rest
+} = Astro.props;
+
+const sizes = {
+  lg: "px-5 py-2.5",
+  md: "px-4 py-2",
+};
+
+const styles = {
+  outline: "bg-white border-2 border-black hover:bg-gray-100 text-black ",
+  primary: "bg-black text-white hover:bg-gray-800  border-2 border-transparent",
+  inverted: "bg-white text-black   border-2 border-transparent",
+  muted: "bg-gray-100 hover:bg-gray-200   border-2 border-transparent",
+};
+---
+
+<main
+  class="grid lg:grid-cols-2 place-items-center pt-16 pb-8 md:pt-12 md:pb-24 max-w-screen-xl mx-auto px-5">
+  <div class="py-6 md:order-1 hidden md:block">
+    <Picture
+      src={src}
+      alt="Astronaut in the air"
+      widths={[200, 400, 600]}
+      aspectRatio="4:3"
+      sizes="(max-width: 800px) 100vw, 620px"
+      loading="eager"
+      format="avif"
+    />
+  </div>
+  <div>
+    <h1
+      class="text-5xl lg:text-6xl xl:text-7xl font-bold lg:tracking-tight xl:tracking-tighter">
+      {Headline}
+    </h1>
+    <p class="text-lg mt-4 text-slate-600 max-w-xl">
+      {bottomText}
+    </p>
+    <div class="mt-6 flex flex-col sm:flex-row gap-3">
+      <a
+        href="#"
+        href="https://web3templates.com/templates/astroship-starter-website-template-for-astro"
+        target="_blank"
+        class=" bg-black text-white  py-2 px-4 flex gap-1 items-center justify-center rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200"
+        rel="noopener">
+        <Icon class="text-white w-5 h-5" name="bx:bxs-cloud-download" />
+
+        {button1}
+    </a>
+      <a
+        
+        style="outline"
+        rel="noopener"
+        href="https://github.com/surjithctly/astroship"
+        class="flex gap-1 items-center py-2 px-4 border-black border-2 justify-center rounded text-center transition focus-visible:ring-2 ring-offset-2 ring-gray-200"
+        target="_blank">
+        <Icon class="text-black w-4 h-4" name="bx:bxl-github" />
+        {button2}
+</a>
+    </div>
+  </div>
+</main>

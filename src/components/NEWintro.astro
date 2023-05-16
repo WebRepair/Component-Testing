@@ -1,9 +1,17 @@
 ---
 import { Icon } from "astro-icon";
 import ContentSection from "~/components/content-section.astro";
+
+const Headline = "Intro component"
+
+const bottomText = ""
+
+const button1 = "Read the docs"
+
+const button2 = "Try it out"
 ---
 
-<ContentSection title="Intro component" id="intro">
+<ContentSection title={Headline} id="intro">
   <Icon slot="eyebrow" name="logomark" class="h-32" />
   <Fragment slot="lead">
     Astro is a new kind of site builder for the
@@ -17,14 +25,14 @@ import ContentSection from "~/components/content-section.astro";
       class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
     >
       <Icon pack="mdi" name="telescope" class="h-8" />
-      <span>Read the docs</span>
+      <span>{button1}</span>
     </a>
     <a
       href="https://astro.new/"
       class="flex items-center justify-center gap-3 border-2 border-current px-6 py-4"
     >
       <Icon pack="mdi" name="rocket" class="h-8" />
-      <span>Try it out</span>
+      <span>{button2}</span>
     </a>
   </div>
   <div class=" border-b-2 border-black px-20 md:px-96 pb-10 ">  </div>

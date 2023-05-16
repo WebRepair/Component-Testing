@@ -2,6 +2,10 @@
 
 import { Icon } from "astro-icon";
 
+const Headline = "Component from Astro Themes"
+
+const bottomText = "called NEWcomponent1.astro in the project"
+
 const features = [
   {
     title: "Bring Your Own Framework",
@@ -44,10 +48,10 @@ const features = [
 
 <div class="mt-16 md:mt-20">
   <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-    Component from Astro Themes
+    {Headline}
   </h2>
   <p class="text-lg mt-4 text-slate-600">
-    called NEWcomponent1.astro in the project
+    {bottomText}
   </p>
 </div>
 

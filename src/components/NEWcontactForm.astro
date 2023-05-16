@@ -1,38 +1,53 @@
 ---
 const { align = "center" } = Astro.props;
 const { class: className } = Astro.props;
+
+
+
+const Headline = "Contact"
+
+const bottomText = "Send us shit"
+
+const leftHeadline = "Contact form that works actually"
+
+const leftBottomText = "Have something to say? We are here to help. Fill up the form or send email or call phone. Message send to mictom747@gmail.com"
+
+const address = "1734 Sanfransico, CA 93063"
+
+const email = "cock@cock.cock"
+
+const phoneNumber = "+1 (987) 4587 899"
 ---
 <div class:list={["max-w-screen-xl mx-auto px-5", className]}>
     
   
 <div class:list={["mt-16", align === "center" && "text-center"]}>
     <h1 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
-      <slot name="title">Contact</slot>
+      <slot name="title">{Headline}</slot>
     </h1>
     <p class="text-lg mt-4 text-slate-600">
-      <slot name="desc">Send us shit</slot>
+      <slot name="desc">{bottomText}</slot>
     </p>
   </div>
 
 <div class="grid md:grid-cols-2 gap-10 mx-auto max-w-4xl mt-16">
     <div>
-      <h2 class="font-medium text-2xl text-gray-800">Contact form that works actually</h2>
+      <h2 class="font-medium text-2xl text-gray-800">{leftHeadline}</h2>
       <p class="text-lg leading-relaxed text-slate-500 mt-3">
-        Have something to say? We are here to help. Fill up the form or send
-        email or call phone. Message send to mictom747@gmail.com
+       {leftBottomText}
       </p>
       <div class="mt-5">
         <div class="flex items-center mt-2 space-x-2 text-gray-600">
           
-          <span>1734 Sanfransico, CA 93063</span>
+          <span>{address}</span>
         </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
 <a
             href="mailto:cock@cock.com"
-            >cock@cock.cock</a
+            >{email}</a
           >
         </div><div class="flex items-center mt-2 space-x-2 text-gray-600">
           <a
-            href="tel:+1 (987) 4587 899">+1 (987) 4587 899</a
+            href={phoneNumber}> {phoneNumber} </a
           >
         </div>
       </div>

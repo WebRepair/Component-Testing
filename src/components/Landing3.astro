@@ -1,0 +1,123 @@
+---
+import { Icon } from 'astro-icon'
+
+const src = 'images/astronaut-hero-img.webp'
+
+
+const Headline = "Starter for Astro"
+
+const ColoredHeadline = "Accessible"
+
+const bottomText = ""
+
+const button1 = "Stars on Github"
+
+const button2 = "Read the Docs"
+---
+ 
+<section class="hero my-24">
+  <div class="container">
+    <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
+      <div class="flex flex-col items-center gap-8 md:items-start">
+        <h1 class="text-center ml-24 text-6xl md:text-left lg:text-8xl">
+          <slot><span class="text-gradient">{ColoredHeadline}</span> {Headline}</slot>
+        </h1>
+
+        <div class=" lg:m-auto flex flex-col gap-3 min-[500px]:flex-row">
+          
+          
+          <button class=" hover:underline "> 
+            <div class=" grid grid-cols-4 bg-purple-400"> 
+            
+            
+              <div class=" col-span-1 "> <Icon pack="ion" name="star-outline" class=" p-4 " /> </div>
+
+              <div class=" px-1 font-bold col-span-2 my-auto"> {button1} </div> 
+  
+           
+             </div>
+           </button>
+
+
+
+          <button class=" hover:underline ">
+          <div class=" grid grid-cols-4 bg-teal-200"> 
+          
+          
+            <div class=" col-span-1 "> <Icon pack="ion" name="bookmark-outline" class=" p-4 " /> </div>
+
+            <div class=" px-2 font-bold col-span-2 my-auto"> {button2} </div> 
+
+         
+        </div>
+        </button>
+
+
+
+        </div>
+      </div>
+      <img class="hidden lg:scale-75 lg:block" src={src} alt="" decoding="async" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .text-gradient {
+  background: linear-gradient(45deg, rgb(160, 189, 252) 25%, blue);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+
+.darkmode .text-gradient {
+    background: linear-gradient(45deg, rgb(160, 189, 252), blue);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+:root {
+  --radius-small: 3px;
+  --radius-large: 6px;
+  --gap-default: 2rem;
+  --font-measure: 70ch;
+  --font-family-default: 'Open Sans', sans-serif;
+  --font-family-special: 'Open Sans', sans-serif;
+  /* light theme */
+  --font-color: var(--neutral-900);
+  --action-color: var(--primary-300);
+  --action-color-state: var(--primary-500);
+  --background: var(--neutral-100);
+  --primary-background: var(--primary-100);
+  --neutral-background: var(--neutral-200);
+}
+
+/* dark color scheme overrides */
+.darkmode {
+  --font-color: var(--neutral-100);
+  --action-color: var(--secondary-100);
+  --action-color-state: var(--secondary-500);
+  --background: var(--dark-100);
+  --primary-background: var(--primary-500);
+  --neutral-background: var(--neutral-900);
+}
+
+
+
+pre {
+  padding: 1rem;
+  border-radius: 0.35rem;
+  border: 2px solid var(--action-color);
+}
+
+body .pagination a:hover,
+body .pagination a:focus-visible {
+  background-color: var(--action-color-state);
+}
+
+body .pagination a:hover svg path,
+body .pagination a:focus-visible svg path {
+  stroke: white;
+}
+
+</style>

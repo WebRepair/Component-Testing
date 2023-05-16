@@ -6,7 +6,7 @@ import Compatibility from "~/components/compatibility.astro";
 import Features from "~/components/features.astro";
 import Footer from "~/components/footer.astro";
 import Header from "~/components/header.astro";
-import Intro from "~/components/intro.astro";
+import Intro from "~/components/NEWintro.astro";
 import New1 from "~/components/NEWcomponent1.astro";
 import New2 from "~/components/NEWcontactForm.astro";
 import Showcase from "~/components/showcase.astro";
@@ -67,6 +67,10 @@ const Headline = "Simpler way of integrating text. (First Headline)"
   <body
     class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white"
   >
+  <nav class=" gap-9 p-2 border font-bold flex justify-center sticky"> 
+    <a href="/" class=" hover:text-purple-700"> Home </a>
+    <a href="/second" class=" hover:text-purple-700"> Landing Pages </a>
+</nav>
     <Header />
     <Splash />
     <div class="space-y-24 px-8 py-32">
@@ -135,8 +139,8 @@ const Headline = "Simpler way of integrating text. (First Headline)"
 <script>
 
 // Get the button and the element to toggle
-const toggleButton = document.getElementById('firstButton');
-const firstComponent = document.querySelector('.FirstComponent');
+const toggleButton = document.getElementById('firstButton') as HTMLElement;
+const firstComponent = document.querySelector('.FirstComponent') as HTMLElement;
 
 
 // Define a function to handle the click event
@@ -162,8 +166,8 @@ toggleButton.addEventListener('click', toggleComponent);
 
 
 
-const toggleButton2 = document.getElementById('secondButton');
-const firstComponent2 = document.querySelector('.secondComponent');
+const toggleButton2 = document.getElementById('secondButton') as HTMLElement;
+const firstComponent2 = document.querySelector('.secondComponent') as HTMLElement;
 
 
 // Define a function to handle the click event
@@ -188,8 +192,8 @@ toggleButton2.addEventListener('click', toggleComponent2);
 
 
 
-const toggleButton3 = document.getElementById('thirdButton');
-const firstComponent3 = document.querySelector('.thirdComponent');
+const toggleButton3 = document.getElementById('thirdButton') as HTMLElement;
+const firstComponent3 = document.querySelector('.thirdComponent') as HTMLElement;
 
 
 // Define a function to handle the click event
@@ -215,8 +219,8 @@ toggleButton3.addEventListener('click', toggleComponent3);
 
 
 
-const toggleButton4 = document.getElementById('fourthButton');
-const firstComponent4 = document.querySelector('.fourthComponent');
+const toggleButton4 = document.getElementById('fourthButton') as HTMLElement;
+const firstComponent4 = document.querySelector('.fourthComponent') as HTMLElement;
 
 
 // Define a function to handle the click event
@@ -242,8 +246,8 @@ toggleButton4.addEventListener('click', toggleComponent4);
 
 
 
-const toggleButton5 = document.getElementById('fifthButton');
-const firstComponent5 = document.querySelector('.fifthComponent');
+const toggleButton5 = document.getElementById('fifthButton') as HTMLElement;
+const firstComponent5 = document.querySelector('.fifthComponent') as HTMLElement;
 
 
 // Define a function to handle the click event
@@ -269,8 +273,8 @@ toggleButton5.addEventListener('click', toggleComponent5);
 
 
 
-const toggleButton6 = document.getElementById('sixthButton');
-const firstComponent6 = document.querySelector('.sixthComponent');
+const toggleButton6 = document.getElementById('sixthButton') as HTMLElement;
+const firstComponent6 = document.querySelector('.sixthComponent') as HTMLElement;
 
 
 // Define a function to handle the click event
@@ -298,8 +302,8 @@ toggleButton6.addEventListener('click', toggleComponent6);
 
 
 
-const toggleButton7 = document.getElementById('seventhButton');
-const firstComponent7 = document.querySelector('.seventhComponent');
+const toggleButton7 = document.getElementById('seventhButton') as HTMLElement;
+const firstComponent7 = document.querySelector('.seventhComponent') as HTMLElement;
 
 
 // Define a function to handle the click event

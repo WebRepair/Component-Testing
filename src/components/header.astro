@@ -4,7 +4,7 @@ import ThemeSwitcher from "~/components/theme-switcher.astro";
 import type { NavItem } from "~/types";
 
 const navItems: Array<NavItem> = [
-  { title: "Features", url: "#features" },
+  { title: "Covers", url: "/second" },
   { title: "Compatibility", url: "#compatibility" },
   { title: "Showcase", url: "#showcase" },
 ];
@@ -130,7 +130,7 @@ const navItems: Array<NavItem> = [
 <style>
   .fixed-header {
     @apply fixed bottom-auto top-0;
-    @apply border-default bg-default text-default;
+
   }
   .modal.is-open {
     @apply block;

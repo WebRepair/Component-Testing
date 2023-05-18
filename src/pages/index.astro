@@ -1,14 +1,19 @@
 ---
 import "@fontsource/inter/variable.css";
+import Landing1 from 'src/components/Landing1.astro'
+import Landing2 from 'src/components/Landing2.astro'
+import Landing3 from 'src/components/Landing3.astro'
+import Landing4 from 'src/components/Landing4.astro'
 import FirstComp from "~/components/FirstComp.astro";
 import data from "~/data/showcase/data.json"
-import Compatibility from "~/components/compatibility.astro";
 import Features from "~/components/features.astro";
 import Footer from "~/components/footer.astro";
 import Header from "~/components/header.astro";
 import Intro from "~/components/NEWintro.astro";
 import New1 from "~/components/NEWcomponent1.astro";
 import New2 from "~/components/NEWcontactForm.astro";
+import NewSimple from "~/components/NEWsimple.astro";
+import NEWcontent from "~/components/NEWcontent.astro";
 import Showcase from "~/components/showcase.astro";
 import Splash from "~/components/splash.astro";
 import "~/styles/index.css";
@@ -18,7 +23,7 @@ const image = new URL("social.jpg", site);
 const description =
   "Do not know what this is. Probably visible in source code.";
 
-const Headline = "Simpler way of integrating text. (First Headline)"
+const Headline = "Headline from index.astro JS section"
 ---
 
 <!DOCTYPE html>
@@ -67,54 +72,48 @@ const Headline = "Simpler way of integrating text. (First Headline)"
   <body
     class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white"
   >
-  <nav class=" gap-9 p-2 border font-bold flex justify-center sticky"> 
+
+  <div class="sticky top-0 bg-white">  
+  <nav class=" gap-9 p-2 border font-bold flex justify-center"> 
     <a href="/" class=" hover:text-purple-700"> Home </a>
     <a href="/second" class=" hover:text-purple-700"> Landing Pages </a>
-</nav>
+    <a href="/three" class=" hover:text-purple-700"> Product/Service Info </a>
+    <a href="/four" class=" hover:text-purple-700"> Contact Forms </a>
+    <a href="/extra" class=" hover:text-purple-700"> Extra </a>
+</nav></div>
     <Header />
     <Splash />
     <div class="space-y-24 px-8 py-32">
     
         
       
-      <div class=""> <button id="firstButton" class=" ml-5 border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> First Basic Component for Json stuff </div>
-      <ul class=" FirstComponent border-2 border-black">
-       <div class=" flex justify-center text-red-600 text-3xl"> {Headline} </div> 
-        {
-          data.map((data) => {
-            return (
-              <FirstComp
-                title={data.title}
-                subtext={data.subtext}
-              />
-            );
-          })
-        }
-      </ul>
+      <div class="">
+      <button id="firstButton" class=" ml-5 border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> First Basic Component for Json stuff </div>
+      <div class=" FirstComponent border-2 border-black">
+          <FirstComp/>
+      </div>
 
 
-      <button id="secondButton" class=" ml-5 border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> Two buttons large text 
+      <button id="secondButton" class=" ml-5 border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> Landing 1
       <div class=" secondComponent ">
-      <Intro />
+      <Landing1 />
       </div>
 
 
-      <br> <button id="thirdButton" class=" ml-5  border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> Astro Themes Features 
+      <br> <button id="thirdButton" class=" ml-5  border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> Landing 2 
       <div class=" thirdComponent ">
-      <New1 />
+      <Landing2 />
       </div>
 
 
-      <br> <button id="fourthButton" class=" ml-5 border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> Features from Template
+      <br> <button id="fourthButton" class=" ml-5  border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> Landing 3 
       <div class=" fourthComponent ">
-      <Features />
+      <Landing3 />
       </div>
-      
 
-
-      <br> <button id="fifthButton" class=" ml-5 border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> Compatibility with frameworks
+      <br> <button id="fifthButton" class=" ml-5  border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> Landing 4 
       <div class=" fifthComponent ">
-      <Compatibility />
+      <Landing4 />
       </div>
 
 
@@ -123,13 +122,44 @@ const Headline = "Simpler way of integrating text. (First Headline)"
       <Showcase />
       </div>
       
-
-      <br> <button id="seventhButton" class=" ml-5 border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> Cheeky Contact Form 
+  
+      <br> <button id="seventhButton" class=" ml-5 border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> Simple Button 
       <div class=" seventhComponent ">
-      <New2 />
+      <NewSimple />
+      </div>
+  
+  
+      <br> <button id="eightButton" class=" ml-5 border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> Content shi 
+      <div class=" eightComponent ">
+      <NEWcontent />
       </div>
 
+
+      <br> <button id="nineButton" class=" ml-5 border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> Two buttons large text 
+      <div class=" nineComponent ">
+      <Intro />
+      </div>
+  
+  
+      <br> <button id="tenButton" class=" ml-5  border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> Astro Themes Features 
+      <div class=" tenComponent ">
+      <New1 />
+      </div>
+  
+  
+      <br> <button id="elevenButton" class=" ml-5 border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> Features from Template
+      <div class=" elevenComponent ">
+      <Features />
+      </div>
+      
+  
+  
+      <br> <button id="twelveButton" class=" ml-5 border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> Compatibility with frameworks
+      <div class=" twelveComponent ">
+      <New2 />
     </div>
+      
+    
     <Footer />
   </body>
 </html>
@@ -320,6 +350,177 @@ function toggleComponent7() {
 
 // Attach the click event to the button
 toggleButton7.addEventListener('click', toggleComponent7);
+
+
+
+// eight BUTTON
+
+
+
+
+const toggleButton8 = document.getElementById('eightButton') as HTMLElement;
+const firstComponent8 = document.querySelector('.eightComponent') as HTMLElement;
+
+
+// Define a function to handle the click event
+function toggleComponent8() {
+  if (firstComponent8?.style.display === 'none') {
+    firstComponent8.style.display = 'block'; // Show the component
+    toggleButton8.style.backgroundColor = '';
+  } else {
+    firstComponent8.style.display = 'none'; // Hide the component
+    toggleButton8.style.backgroundColor = 'grey'; // Hide the component
+  }
+}
+
+
+// Attach the click event to the button
+toggleButton8.addEventListener('click', toggleComponent8);
+
+
+
+// nine BUTTON
+
+
+
+
+const toggleButton9 = document.getElementById('nineButton') as HTMLElement;
+const firstComponent9 = document.querySelector('.nineComponent') as HTMLElement;
+
+
+// Define a function to handle the click event
+function toggleComponent9() {
+if (firstComponent9?.style.display === 'none') {
+  firstComponent9.style.display = 'block'; // Show the component
+  toggleButton9.style.backgroundColor = '';
+} else {
+  firstComponent9.style.display = 'none'; // Hide the component
+  toggleButton9.style.backgroundColor = 'grey'; // Hide the component
+}
+}
+
+
+// Attach the click event to the button
+toggleButton9.addEventListener('click', toggleComponent9);
+
+
+
+
+
+// ten BUTTON
+
+
+
+
+const toggleButton10 = document.getElementById('tenButton') as HTMLElement;
+const firstComponent10 = document.querySelector('.tenComponent') as HTMLElement;
+
+
+// Define a function to handle the click event
+function toggleComponent10() {
+if (firstComponent10?.style.display === 'none') {
+  firstComponent10.style.display = 'block'; // Show the component
+  toggleButton10.style.backgroundColor = '';
+} else {
+  firstComponent10.style.display = 'none'; // Hide the component
+  toggleButton10.style.backgroundColor = 'grey'; // Hide the component
+}
+}
+
+
+// Attach the click event to the button
+toggleButton10.addEventListener('click', toggleComponent10);
+
+
+// ELEVEN BUTTON
+const toggleButton11 = document.getElementById('elevenButton') as HTMLElement;
+const firstComponent11 = document.querySelector('.elevenComponent') as HTMLElement;
+
+// Define a function to handle the click event
+function toggleComponent11() {
+  if (firstComponent11?.style.display === 'none') {
+    firstComponent11.style.display = 'block'; // Show the component
+    toggleButton11.style.backgroundColor = '';
+  } else {
+    firstComponent11.style.display = 'none'; // Hide the component
+    toggleButton11.style.backgroundColor = 'grey';
+  }
+}
+
+// Attach the click event to the button
+toggleButton11.addEventListener('click', toggleComponent11);
+
+// TWELVE BUTTON
+const toggleButton12 = document.getElementById('twelveButton') as HTMLElement;
+const firstComponent12 = document.querySelector('.twelveComponent') as HTMLElement;
+
+// Define a function to handle the click event
+function toggleComponent12() {
+  if (firstComponent12?.style.display === 'none') {
+    firstComponent12.style.display = 'block'; // Show the component
+    toggleButton12.style.backgroundColor = '';
+  } else {
+    firstComponent12.style.display = 'none'; // Hide the component
+    toggleButton12.style.backgroundColor = 'grey';
+  }
+}
+
+// Attach the click event to the button
+toggleButton12.addEventListener('click', toggleComponent12);
+
+// THIRTEEN BUTTON
+const toggleButton13 = document.getElementById('thirteenButton') as HTMLElement;
+const firstComponent13 = document.querySelector('.thirteenComponent') as HTMLElement;
+
+// Define a function to handle the click event
+function toggleComponent13() {
+  if (firstComponent13?.style.display === 'none') {
+    firstComponent13.style.display = 'block'; // Show the component
+    toggleButton13.style.backgroundColor = '';
+  } else {
+    firstComponent13.style.display = 'none'; // Hide the component
+    toggleButton13.style.backgroundColor = 'grey';
+  }
+}
+
+// Attach the click event to the button
+toggleButton13.addEventListener('click', toggleComponent13);
+
+// FOURTEEN BUTTON
+const toggleButton14 = document.getElementById('fourteenButton') as HTMLElement;
+const firstComponent14 = document.querySelector('.fourteenComponent') as HTMLElement;
+
+// Define a function to handle the click event
+function toggleComponent14() {
+  if (firstComponent14?.style.display === 'none') {
+    firstComponent14.style.display = 'block'; // Show the component
+    toggleButton14.style.backgroundColor = '';
+  } else {
+    firstComponent14.style.display = 'none'; // Hide the component
+    toggleButton14.style.backgroundColor = 'grey';
+  }
+}
+
+// Attach the click event to the button
+toggleButton14.addEventListener('click', toggleComponent14);
+
+// FIFTEEN BUTTON
+const toggleButton15 = document.getElementById('fifteenButton') as HTMLElement;
+const firstComponent15 = document.querySelector('.fifteenComponent') as HTMLElement;
+
+// Define a function to handle the click event
+function toggleComponent15() {
+  if (firstComponent15?.style.display === 'none') {
+    firstComponent15.style.display = 'block'; // Show the component
+    toggleButton15.style.backgroundColor = '';
+  } else {
+    firstComponent15.style.display = 'none'; // Hide the component
+    toggleButton15.style.backgroundColor = 'grey';
+  }
+}
+
+// Attach the click event to the button
+toggleButton15.addEventListener('click', toggleComponent15);
 </script>
 
 

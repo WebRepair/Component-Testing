@@ -1,39 +1,24 @@
 ---
-export interface Props {
-    title: string;
-    subtext: string;
-}
+import data from 'src/data/showcase/data.json'
 
-const { title, subtext } = Astro.props;
-
-
-
-const Headline = "Simpler way of integrating text. but appears twice. (Second Headline)"
 
 ---
 
 
 
-<div class=" mt-20 mb-20"> 
 
-    <div class=" flex justify-center text-xl"> {Headline} </div>
+<ul class="FirstComp">
 
-</div>
+    <div class=" flex justify-center text-red-600 text-3xl"> {data.headlines.headline1} </div> 
 
-
-
-
-
-
-<li class="FirstComp">
-
-    <h1 class=" flex justify-center pb-10 font-bold">
-        {title}
+    <h1 class=" flex justify-center pt-10 p-5 text-xl font-bold">
+        {data.titles.title2}
     </h1>
     
     <h3 class=" flex justify-center p-5">
-         {subtext} 
+         {data.subtexts.subtext3} 
     </h3>
-  </li>
 
+    
+</ul>
 

@@ -1,10 +1,103 @@
-[
-    {
-      "title": "This is the weird and complex way. (Json titles)",
-      "subtext": "Why did the geologist go on a diet? Because they realized eating rocks was really hard to digest. (Json bottom text)"
-    },
-    {
-        "title": "How to integrate Json file",
-        "subtext": "I decided to try eating sand, but I quickly realized it was a grainy experience."
-      }
-  ]
+
+  {
+    "headlines": { 
+                "headline1": "Welcome to WebRepair Assembly Station"
+                
+              },
+    "titles": { 
+                "title1": "Json title", 
+                "title2": "See ~> all the components and data.json"
+              },
+
+    "subtexts": {
+                  "subtext1": "Why did the geologist go on a diet? Because they realized eating rocks was really hard to digest. (Json first bottom text)",
+                  "subtext2": "I decided to try eating sand, but I quickly realized it was a grainy experience. (Json second bottom text)",
+                  "subtext3": "data.json is the main JSON file that contains all of the TEXT",
+                  "subtext4": ""
+                  },
+
+    "Landing1": {
+                    "Headline": "Shaping the world with",
+                    "ColoredHeadline": "critical simplicity.",
+                    "bottomText": "is this small weird grey text for no reason worth it ?",
+                    "bottomText2": "Bottom Text bottom text yes, somehiing longer so it is long, critical simplicity, send us shit sure yeah, better than latin, no one translates your latin bs",
+
+                    "Button1": "Get fucked",
+                    "Button2": "Learn more",
+                    "Button": "Button",
+
+                    "Paragr1": "The lowest prices",
+                    "SubPar1": "Some text here",
+                    "Paragr2": "The fastest on the market",
+                    "SubPar2": "Some text here",
+                    "Paragr3": "The most best",
+                    "SubPar3": "Some text here"
+                    
+                },              
+                
+    "Components": {
+                  "title": "Building faster websites.",
+                  "subtext": "Critical simplicity is the antidote to useless complexity.",
+                  "title2": "INSIDE TEMPLATE",
+                  "subtext2": "So what's inside? ..."
+                },
+
+    "Buttons": {
+                  "b0": "Button",
+                  "b1": "Get fucked",
+                  "b2": "Learn more",
+                  "b3": "Buy us"
+                },       
+
+
+
+    "Features": [
+      
+    {              
+    "title": "Bring Your Own Framework",
+    "description":
+      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
+    "icon": "bx:bxs-briefcase",
+    "icon2": "mdi:handshake"
+  },
+  {
+    "title": "100% Static HTML, No JS",
+    "description":
+      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
+    "icon": "bx:bxs-window-alt",
+    "icon2": "mdi:feather"
+  },
+  {
+    "title": "On-Demand Components",
+    "description":
+      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
+    "icon": "bx:bxs-data",
+    "icon2": "mdi:directions-fork"
+  },
+  {
+    "title": "Broad Integration",
+    "description":
+      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
+    "icon": "bx:bxs-bot",
+    "icon2": "mdi:graph"
+  },
+  {
+    "title": "SEO Enabled",
+    "description":
+      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
+    "icon": "bx:bxs-file-find",
+    "icon2": "mdi:search-web"
+  },
+  {
+    "title": "Community",
+    "description":
+      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
+    "icon": "bx:bxs-user",
+    "icon2": "mdi:account-group"
+                } ]  
+
+  }
+     
+  
+  
+    

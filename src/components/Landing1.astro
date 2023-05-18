@@ -14,16 +14,7 @@ const links = [
     },
 ];
 
-
-const Headline = "Shaping a world with"
-
-const ColoredHeadline = "reimagination."
-
-const bottomText = "This is a landing page, small weird grey text for no reason, saying nothing."
-
-const buttons = ""
-
-
+import data from 'src/data/showcase/data.json'
 
 ---
 <html>
@@ -36,7 +27,7 @@ const buttons = ""
     const navlinks = document.querySelector("#navlinks") as HTMLElement;
     const hamburger = document.querySelector("#hamburger") as HTMLElement;
     const layer = document.querySelector("#navLayer") as HTMLElement;
-    const links = [...navlinks.querySelector("ul").children] ;
+    
 
     function toggleNavlinks() {
         if (isToggled) {
@@ -54,15 +45,10 @@ const buttons = ""
         toggleNavlinks();
     });
 
-    links.forEach((link) => {
-        link.addEventListener("click", () => {
-            isToggled = !isToggled;
-            toggleNavlinks();
-        });
-    });
+    
 </script>
 
-<header>
+<header id="landing">
     <nav class="absolute z-10 w-full border-b border-black/5 dark:border-white/5 lg:border-transparent">
         
             <div class="relative flex flex-wrap items-center justify-between gap-6 py-3 md:gap-0 md:py-4">
@@ -103,7 +89,7 @@ const buttons = ""
 
                     <div class="mt-12 mr-10 lg:mt-0">
                         <a href="/register" class="relative flex h-9 w-full items-center justify-center px-4 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max">
-                            <span class="relative text-sm font-semibold text-white"> Get Started</span>
+                            <span class="relative text-sm font-semibold text-white"> {data.Landing1.Button1} </span>
                         </a>
                     </div>
                 </div>
@@ -119,15 +105,15 @@ const buttons = ""
     <div class="max-w-7xl mx-auto px-6 md:px-12 xl:px-6">
         <div class="relative pt-36 ml-auto">
             <div class="lg:w-2/3 text-center mx-auto">
-                <h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl">{Headline} <span class="text-primary dark:text-white">{ColoredHeadline}</span></h1>
-                <p class="mt-8 text-gray-700 dark:text-gray-300">{bottomText}</p>
+                <h1 class="text-gray-900 dark:text-white font-bold text-5xl md:text-6xl xl:text-7xl">{data.Landing1.Headline} <span class="text-primary dark:text-white">{data.Landing1.ColoredHeadline}</span></h1>
+                <p class="mt-8 text-gray-700 dark:text-gray-300">{data.Landing1.bottomText}</p>
                 <div class="mt-16 flex flex-wrap justify-center gap-y-4 gap-x-6">
                     <a
                       href="#"
                       class="relative flex h-11 w-full items-center justify-center px-6 before:absolute before:inset-0 before:rounded-full before:bg-primary before:transition before:duration-300 hover:before:scale-105 active:duration-75 active:before:scale-95 sm:w-max"
                     >
                       <span class="relative text-base font-semibold text-white"
-                        >Get started</span
+                        >{data.Landing1.Button1}</span
                       >
                     </a>
                     <a
@@ -136,22 +122,22 @@ const buttons = ""
                     >
                       <span
                         class="relative text-base font-semibold text-primary dark:text-white"
-                        >Learn more</span
+                        >{data.Landing1.Button2}</span
                       >
                     </a>
                 </div>
                 <div class="hidden py-8 mt-16 border-y border-gray-100 dark:border-gray-800 sm:flex justify-between">
                     <div class="text-left">
-                        <h6 class="text-lg font-semibold text-gray-700 dark:text-white">The lowest price</h6>
-                        <p class="mt-2 text-gray-500">Some text here</p>
+                        <h6 class="text-lg font-semibold text-gray-700 dark:text-white">{data.Landing1.Paragr1}</h6>
+                        <p class="mt-2 text-gray-500">{data.Landing1.SubPar1}</p>
                     </div>
                     <div class="text-left">
-                        <h6 class="text-lg font-semibold text-gray-700 dark:text-white">The fastest on the market</h6>
-                        <p class="mt-2 text-gray-500">Some text here</p>
+                        <h6 class="text-lg font-semibold text-gray-700 dark:text-white">{data.Landing1.Paragr2}</h6>
+                        <p class="mt-2 text-gray-500">{data.Landing1.SubPar2}</p>
                     </div>
                     <div class="text-left">
-                        <h6 class="text-lg font-semibold text-gray-700 dark:text-white">The most loved</h6>
-                        <p class="mt-2 text-gray-500">Some text here</p>
+                        <h6 class="text-lg font-semibold text-gray-700 dark:text-white">{data.Landing1.Paragr3}</h6>
+                        <p class="mt-2 text-gray-500">{data.Landing1.SubPar3}</p>
                     </div>
                 </div>
             </div>

@@ -1,4 +1,6 @@
 ---
+import data from 'src/data/showcase/data.json'
+
 import { Icon } from 'astro-icon'
 
 const src = 'images/astronaut-hero-img.webp'
@@ -20,19 +22,19 @@ const button2 = "Read the Docs"
     <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
       <div class="flex flex-col items-center gap-8 md:items-start">
         <h1 class="text-center ml-24 text-6xl md:text-left lg:text-8xl">
-          <slot><span class="text-gradient">{ColoredHeadline}</span> {Headline}</slot>
+          <slot> {data.Landing1.Headline} <span class="text-gradient">{data.Landing1.ColoredHeadline}</span></slot>
         </h1>
 
         <div class=" lg:m-auto flex flex-col gap-3 min-[500px]:flex-row">
           
           
           <button class=" hover:underline "> 
-            <div class=" grid grid-cols-4 bg-purple-400"> 
+            <div class=" grid grid-cols-4 bg-purple-400 p-2"> 
             
             
-              <div class=" col-span-1 "> <Icon pack="ion" name="star-outline" class=" p-4 " /> </div>
+              <div class=" col-span-1 p-1 "> <Icon pack="ion" name="star-outline" class=" " /> </div>
 
-              <div class=" px-1 font-bold col-span-2 my-auto"> {button1} </div> 
+              <div class=" px-1 font-bold col-span-2 my-auto"> {data.Landing1.Button1} </div> 
   
            
              </div>
@@ -41,12 +43,12 @@ const button2 = "Read the Docs"
 
 
           <button class=" hover:underline ">
-          <div class=" grid grid-cols-4 bg-teal-200"> 
+          <div class=" grid grid-cols-4 bg-teal-200 p-1"> 
           
           
-            <div class=" col-span-1 "> <Icon pack="ion" name="bookmark-outline" class=" p-4 " /> </div>
+            <div class=" col-span-1 p-1 "> <Icon pack="ion" name="bookmark-outline" class=" " /> </div>
 
-            <div class=" px-2 font-bold col-span-2 my-auto"> {button2} </div> 
+            <div class=" px-2 font-bold col-span-2 my-auto"> {data.Landing1.Button2} </div> 
 
          
         </div>
@@ -63,7 +65,7 @@ const button2 = "Read the Docs"
 
 <style>
   .text-gradient {
-  background: linear-gradient(45deg, rgb(160, 189, 252) 25%, blue);
+  background: linear-gradient(45deg, rgb(135, 6, 167) 25%, rgb(57, 100, 241));
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;

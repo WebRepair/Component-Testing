@@ -1,0 +1,269 @@
+---
+import "@fontsource/inter/variable.css";
+import Footer from "~/components/footer.astro";
+import New2 from "~/components/NEWcontactForm.astro";
+import "~/styles/index.css";
+
+const { generator, site } = Astro;
+const image = new URL("social.jpg", site);
+const description =
+  "Do not know what this is. Probably visible in source code.";
+
+const Headline = "Simpler way of integrating text. (First Headline)"
+---
+
+<!DOCTYPE html>
+<html lang="en" class="h-full motion-safe:scroll-smooth" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="generator" content={generator} />
+
+    <title>Component Test</title>
+    <meta name="description" content={description} />
+
+    <!-- social media -->
+    <meta property="og:title" content="Astro" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:url" content={site} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- initialize theme -->
+    <script is:inline>
+      const themeSaved = localStorage.getItem("theme");
+
+      if (themeSaved) {
+        document.documentElement.dataset.theme = themeSaved;
+      } else {
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        document.documentElement.dataset.theme = prefersDark ? "dark" : "light";
+      }
+
+      window
+        .matchMedia("(prefers-color-scheme: dark)")
+        .addEventListener("change", (event) => {
+          if (!localStorage.getItem("theme")) {
+            document.documentElement.dataset.theme = event.matches
+              ? "dark"
+              : "light";
+          }
+        });
+    </script>
+  </head>
+  <body
+    class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white"
+  >
+  <nav class=" gap-9 p-2 border font-bold flex justify-center sticky"> 
+    <a href="/" class=" hover:text-purple-700"> Home </a>
+    <a href="/second" class=" hover:text-purple-700"> Landing Pages </a>
+    <a href="/three" class=" hover:text-purple-700"> Product/Service Info </a>
+    <a href="/four" class=" hover:text-purple-700"> Contact Forms </a>
+    <a href="/extra" class=" hover:text-purple-700"> Extra </a>
+</nav>
+   
+
+<div class="space-y-24 px-8 py-32">
+    
+        
+     <button id="seventhButton" class=" ml-5 border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> Payment Gates/ Subscription, ... 
+    <div class=" seventhComponent ">
+    
+    </div>
+
+  </div>
+  <Footer />
+</body>
+</html>
+
+
+
+<script>
+
+// Get the button and the element to toggle
+const toggleButton = document.getElementById('firstButton') as HTMLElement;
+const firstComponent = document.querySelector('.FirstComponent') as HTMLElement;
+
+
+// Define a function to handle the click event
+function toggleComponent() {
+if (firstComponent?.style.display === 'none') {
+  firstComponent.style.display = 'block'; // Show the component
+  toggleButton.style.backgroundColor = '';
+} else {
+  firstComponent.style.display = 'none'; // Hide the component
+  toggleButton.style.backgroundColor = 'grey'; // button color change
+}
+}
+
+
+// Attach the click event to the button
+toggleButton.addEventListener('click', toggleComponent);
+
+
+
+
+// SECOND BUTTON
+
+
+
+
+const toggleButton2 = document.getElementById('secondButton') as HTMLElement;
+const firstComponent2 = document.querySelector('.secondComponent') as HTMLElement;
+
+
+// Define a function to handle the click event
+function toggleComponent2() {
+if (firstComponent2?.style.display === 'none') {
+  firstComponent2.style.display = 'block'; // Show the component
+  toggleButton2.style.backgroundColor = '';
+} else {
+  firstComponent2.style.display = 'none'; // Hide the component
+  toggleButton2.style.backgroundColor = 'grey'; // Hide the component
+}
+}
+
+
+// Attach the click event to the button
+toggleButton2.addEventListener('click', toggleComponent2);
+
+
+
+// third BUTTON
+
+
+
+
+const toggleButton3 = document.getElementById('thirdButton') as HTMLElement;
+const firstComponent3 = document.querySelector('.thirdComponent') as HTMLElement;
+
+
+// Define a function to handle the click event
+function toggleComponent3() {
+if (firstComponent3?.style.display === 'none') {
+  firstComponent3.style.display = 'block'; // Show the component
+  toggleButton3.style.backgroundColor = '';
+} else {
+  firstComponent3.style.display = 'none'; // Hide the component
+  toggleButton3.style.backgroundColor = 'grey'; // Hide the component
+}
+}
+
+
+// Attach the click event to the button
+toggleButton3.addEventListener('click', toggleComponent3);
+
+
+
+
+// fourth BUTTON
+
+
+
+
+const toggleButton4 = document.getElementById('fourthButton') as HTMLElement;
+const firstComponent4 = document.querySelector('.fourthComponent') as HTMLElement;
+
+
+// Define a function to handle the click event
+function toggleComponent4() {
+if (firstComponent4?.style.display === 'none') {
+  firstComponent4.style.display = 'block'; // Show the component
+  toggleButton4.style.backgroundColor = '';
+} else {
+  firstComponent4.style.display = 'none'; // Hide the component
+  toggleButton4.style.backgroundColor = 'grey'; // Hide the component
+}
+}
+
+
+// Attach the click event to the button
+toggleButton4.addEventListener('click', toggleComponent4);
+
+
+
+
+// fifth BUTTON
+
+
+
+
+const toggleButton5 = document.getElementById('fifthButton') as HTMLElement;
+const firstComponent5 = document.querySelector('.fifthComponent') as HTMLElement;
+
+
+// Define a function to handle the click event
+function toggleComponent5() {
+if (firstComponent5?.style.display === 'none') {
+  firstComponent5.style.display = 'block'; // Show the component
+  toggleButton5.style.backgroundColor = '';
+} else {
+  firstComponent5.style.display = 'none'; // Hide the component
+  toggleButton5.style.backgroundColor = 'grey'; // Hide the component
+}
+}
+
+
+// Attach the click event to the button
+toggleButton5.addEventListener('click', toggleComponent5);
+
+
+
+
+// sixth BUTTON
+
+
+
+
+const toggleButton6 = document.getElementById('sixthButton') as HTMLElement;
+const firstComponent6 = document.querySelector('.sixthComponent') as HTMLElement;
+
+
+// Define a function to handle the click event
+function toggleComponent6() {
+if (firstComponent6?.style.display === 'none') {
+  firstComponent6.style.display = 'block'; // Show the component
+  toggleButton6.style.backgroundColor = '';
+} else {
+  firstComponent6.style.display = 'none'; // Hide the component
+  toggleButton6.style.backgroundColor = 'grey'; // Hide the component
+}
+}
+
+
+// Attach the click event to the button
+toggleButton6.addEventListener('click', toggleComponent6);
+
+
+
+
+
+
+// seventh BUTTON
+
+
+
+
+const toggleButton7 = document.getElementById('seventhButton') as HTMLElement;
+const firstComponent7 = document.querySelector('.seventhComponent') as HTMLElement;
+
+
+// Define a function to handle the click event
+function toggleComponent7() {
+if (firstComponent7?.style.display === 'none') {
+  firstComponent7.style.display = 'block'; // Show the component
+  toggleButton7.style.backgroundColor = '';
+} else {
+  firstComponent7.style.display = 'none'; // Hide the component
+  toggleButton7.style.backgroundColor = 'grey'; // Hide the component
+}
+}
+
+
+// Attach the click event to the button
+toggleButton7.addEventListener('click', toggleComponent7);
+</script>

@@ -1,125 +1,115 @@
 ---
 import data from 'src/data/showcase/data.json'
 
-import { Icon } from 'astro-icon'
-
-const src = 'images/astronaut-hero-img.webp'
+const src = 'src/data/showcase/images/picture.jpg'
 
 
-const Headline = "Starter for Astro"
-
-const ColoredHeadline = "Accessible"
-
-const bottomText = ""
-
-const button1 = "Stars on Github"
-
-const button2 = "Read the Docs"
 ---
- 
-<section class="hero my-24">
-  <div class="container">
-    <div class="grid grid-cols-1 items-center gap-24 lg:grid-cols-2">
-      <div class="flex flex-col items-center gap-8 md:items-start">
-        <h1 class="text-center ml-24 text-6xl md:text-left lg:text-8xl">
-          <slot> {data.Landing1.Headline} <span class="text-gradient">{data.Landing1.ColoredHeadline}</span></slot>
+
+
+
+   
+
+
+<div class=" htmlX hidden sm:block"> 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&family=Oswald:wght@300;400&family=Sawarabi+Gothic&display=swap" rel="stylesheet">
+  
+  <div class=" grid grid-cols-12">
+
+    <div class="  col-span-6">
+      
+      <div class=" ml-28 mt-36 font-sans">
+        <div class=" font text-black text-4xl flex justify-start"> Real Estate CO. <a class="text-gradient ml-2"> </a>  </div>
+        <h1 class=" font mt-14 flex justify-start text-6xl">	
+          NO JSON. </h1> 
+        
+        <h1 class=" font mt-10 flex justify-start text-6xl "> 
+            RESPONSIVENESS.
         </h1>
 
-        <div class=" lg:m-auto flex flex-col gap-3 min-[500px]:flex-row">
-          
-          
-          <button class=" hover:underline "> 
-            <div class=" grid grid-cols-4 bg-purple-400 p-2"> 
-            
-            
-              <div class=" col-span-1 p-1 "> <Icon pack="ion" name="star-outline" class=" " /> </div>
-
-              <div class=" px-1 font-bold col-span-2 my-auto"> {data.Landing1.Button1} </div> 
-  
-           
-             </div>
-           </button>
-
-
-
-          <button class=" hover:underline ">
-          <div class=" grid grid-cols-4 bg-teal-200 p-1"> 
-          
-          
-            <div class=" col-span-1 p-1 "> <Icon pack="ion" name="bookmark-outline" class=" " /> </div>
-
-            <div class=" px-2 font-bold col-span-2 my-auto"> {data.Landing1.Button2} </div> 
-
-         
-        </div>
-        </button>
-
-
-
-        </div>
+        <h1 class=" font mt-10 flex justify-start text-6xl "> 
+          NEEDS EDIT.
+        </h1>
+        
+        
       </div>
-      <img class="hidden lg:scale-75 lg:block" src={src} alt="" decoding="async" />
     </div>
+
+    <div class=" pb-28 col-span-6">
+        <div class=" mr-10 mt-20"> <img src={src} alt="photo"> </div>
+    </div>
+
   </div>
-</section>
+
+
+      </div>
+
+
 
 <style>
-  .text-gradient {
-  background: linear-gradient(45deg, rgb(135, 6, 167) 25%, rgb(57, 100, 241));
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+.font {
+ font-family: 'Sawarabi Gothic', sans-serif;
 }
+main {
+margin: auto;
+padding: 1.5rem;
+max-width: 60ch;
 
-
-.darkmode .text-gradient {
-    background: linear-gradient(45deg, rgb(160, 189, 252), blue);
-  background-clip: border-box;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+}
+h1 {
+font-size: 4.2rem;
+font-weight: 800;
+margin: 0;
+}
+.text-gradient {
+background-image: var(--accent-gradient);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-size: 400%;
+background-position: 0%;
+}
+.text-gradient2 {
+background-image: var(--accent-gradient2);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-size: 400%;
+background-position: 0%;
+}
+.instructions {
+line-height: 1.6;
+margin: 1rem 0;
+border: 1px solid rgba(var(--accent), 25%);
+background-color: white;
+padding: 1rem;
+border-radius: 0.4rem;
+}
+.instructions code {
+font-size: 0.875em;
+font-weight: bold;
+background: rgba(var(--accent), 12%);
+color: rgb(var(--accent));
+border-radius: 4px;
+padding: 0.3em 0.45em;
+}
+.instructions strong {
+color: rgb(var(--accent));
+}
+.link-card-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+gap: 1rem;
+padding: 0;
 }
 :root {
-  --radius-small: 3px;
-  --radius-large: 6px;
-  --gap-default: 2rem;
-  --font-measure: 70ch;
-  --font-family-default: 'Open Sans', sans-serif;
-  --font-family-special: 'Open Sans', sans-serif;
-  /* light theme */
-  --font-color: var(--neutral-900);
-  --action-color: var(--primary-300);
-  --action-color-state: var(--primary-500);
-  --background: var(--neutral-100);
-  --primary-background: var(--primary-100);
-  --neutral-background: var(--neutral-200);
+--accent: 124, 58, 237;
+--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+--accent-gradient2: linear-gradient(45deg, rgb(var(--accent)), #1503b4 40%, rgb(255, 255, 255) 60%);
 }
-
-/* dark color scheme overrides */
-.darkmode {
-  --font-color: var(--neutral-100);
-  --action-color: var(--secondary-100);
-  --action-color-state: var(--secondary-500);
-  --background: var(--dark-100);
-  --primary-background: var(--primary-500);
-  --neutral-background: var(--neutral-900);
-}
-
-
-
-pre {
-  padding: 1rem;
-  border-radius: 0.35rem;
-  border: 2px solid var(--action-color);
-}
-
-body .pagination a:hover,
-body .pagination a:focus-visible {
-  background-color: var(--action-color-state);
-}
-
-body .pagination a:hover svg path,
-body .pagination a:focus-visible svg path {
-  stroke: white;
+.htmlX {
+font-family: system-ui, sans-serif;
+background-color: #dfc4a9;
 }
 
 </style>

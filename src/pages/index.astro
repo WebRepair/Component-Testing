@@ -4,6 +4,8 @@ import Landing1 from 'src/components/Landing1.astro'
 import Landing2 from 'src/components/Landing2.astro'
 import Landing3 from 'src/components/Landing3.astro'
 import Landing4 from 'src/components/Landing4.astro'
+import Landing5 from "~/components/Landing5.astro";
+import LandingVue1 from 'src/components/LandingVue1.vue'
 import FirstComp from "~/components/FirstComp.astro";
 import data from "~/data/showcase/data.json"
 import Features from "~/components/features.astro";
@@ -17,6 +19,7 @@ import NEWcontent from "~/components/NEWcontent.astro";
 import Showcase from "~/components/showcase.astro";
 import Splash from "~/components/splash.astro";
 import "~/styles/index.css";
+
 
 const { generator, site } = Astro;
 const image = new URL("social.jpg", site);
@@ -72,15 +75,6 @@ const Headline = "Headline from index.astro JS section"
   <body
     class="h-full overflow-x-hidden bg-default text-default text-base selection:bg-secondary selection:text-white"
   >
-
-  <div class="sticky top-0 bg-white">  
-  <nav class=" gap-9 p-2 border font-bold flex justify-center"> 
-    <a href="/" class=" hover:text-purple-700"> Home </a>
-    <a href="/second" class=" hover:text-purple-700"> Landing Pages </a>
-    <a href="/three" class=" hover:text-purple-700"> Product/Service Info </a>
-    <a href="/four" class=" hover:text-purple-700"> Contact Forms </a>
-    <a href="/extra" class=" hover:text-purple-700"> Extra </a>
-</nav></div>
     <Header />
     <Splash />
     <div class="space-y-24 px-8 py-32">
@@ -117,11 +111,17 @@ const Headline = "Headline from index.astro JS section"
       </div>
 
 
-      <br> <button id="sixthButton" class=" ml-5 border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> Showcase 
+      <br> <button id="sixthButton" class=" ml-5 border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> Landing 5
       <div class=" sixthComponent ">
-      <Showcase />
+        <Landing5 />
       </div>
       
+
+      <br> <button id="landVue1Button" class=" ml-5 border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> Landing vue 1
+      <div class="landVue1Component ">
+        <LandingVue1 />
+      </div>
+
   
       <br> <button id="seventhButton" class=" ml-5 border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> Simple Button 
       <div class=" seventhComponent ">
@@ -154,11 +154,28 @@ const Headline = "Headline from index.astro JS section"
       
   
   
-      <br> <button id="twelveButton" class=" ml-5 border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> Compatibility with frameworks
+      <br> <button id="twelveButton" class=" ml-5 border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> Contact
       <div class=" twelveComponent ">
-      <New2 />
+      <Showcase />
     </div>
       
+
+    <br> <button id="thirteenButton" class=" ml-5 border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> Contact
+      <div class=" thirteenComponent ">
+      <New2 />
+    </div>
+
+
+    <br> <button id="fourteenButton" class=" ml-5 border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> Contact
+      <div class=" fourteenComponent ">
+      
+    </div>
+
+
+    <br> <button id="fifteenComponent" class=" ml-5 border border-black px-5 hover:bg-gray-200 "> HIDE/ SHOW </button> Contact
+      <div class=" fifteenComponent ">
+      
+    </div>
     
     <Footer />
   </body>
@@ -167,6 +184,29 @@ const Headline = "Headline from index.astro JS section"
 
 
 <script>
+
+// vue Lanidng pages
+
+
+// Get the button and the element to toggle
+const toggleButtonVue1 = document.getElementById('landVue1Button') as HTMLElement;
+const firstComponentVue1 = document.querySelector('.landVue1Component') as HTMLElement;
+
+
+// Define a function to handle the click event
+function toggleComponentVue1() {
+  if (firstComponentVue1?.style.display === 'none') {
+    firstComponentVue1.style.display = 'block'; // Show the component
+    toggleButtonVue1.style.backgroundColor = '';
+  } else {
+    firstComponentVue1.style.display = 'none'; // Hide the component
+    toggleButtonVue1.style.backgroundColor = 'grey'; // button color change
+  }
+}
+
+
+// Attach the click event to the button
+toggleButtonVue1.addEventListener('click', toggleComponentVue1);
 
 // Get the button and the element to toggle
 const toggleButton = document.getElementById('firstButton') as HTMLElement;

@@ -57,47 +57,64 @@
     "Features": [
       
     {              
-    "title": "Bring Your Own Framework",
+    "title": "pružiny z oceľovej pásky",
     "description":
-      "Build your site using React, Svelte, Vue, Preact, web components, or just plain ol' HTML + JavaScript.",
-    "icon": "bx:bxs-briefcase",
-    "icon2": "mdi:handshake"
+      "",
+    "icon": "bx:bxs-package",
+    "icon2": "mdi:package-variant"
   },
   {
-    "title": "100% Static HTML, No JS",
+    "title": "tvarové pružiny,špirálové pružiny",
     "description":
-      "Astro renders your entire page to static HTML, removing all JavaScript from your final build by default.",
-    "icon": "bx:bxs-window-alt",
-    "icon2": "mdi:feather"
+      "",
+    "icon": "bx:bxs-package",
+    "icon2": "mdi:package-variant"
   },
   {
-    "title": "On-Demand Components",
+    "title": "pružiny z nerezovej pásky ",
     "description":
-      "Need some JS? Astro can automatically hydrate interactive components when they become visible on the page.  ",
-    "icon": "bx:bxs-data",
-    "icon2": "mdi:directions-fork"
+      " ",
+    "icon": "bx:bxs-package",
+    "icon2": "mdi:package-variant"
   },
   {
-    "title": "Broad Integration",
+    "title": "pružiny do zámkov",
     "description":
-      "Astro supports TypeScript, Scoped CSS, CSS Modules, Sass, Tailwind, Markdown, MDX, and any other npm packages.",
-    "icon": "bx:bxs-bot",
-    "icon2": "mdi:graph"
+      "",
+    "icon": "bx:bxs-package",
+    "icon2": "mdi:package-variant"
   },
   {
-    "title": "SEO Enabled",
+    "title": "zámkové pružiny do roliet",
     "description":
-      "Automatic sitemaps, RSS feeds, pagination and collections take the pain out of SEO and syndication. It just works!",
-    "icon": "bx:bxs-file-find",
-    "icon2": "mdi:search-web"
+      "",
+    "icon": "bx:bxs-package",
+    "icon2": "mdi:package-variant"
   },
   {
-    "title": "Community",
+    "title": "tvarové pružiny z drôtu",
     "description":
-      "Astro is an open source project powered by hundreds of contributors making thousands of individual contributions.",
-    "icon": "bx:bxs-user",
-    "icon2": "mdi:account-group"
-                } ]  
+      "",
+    "icon": "bx:bxs-package",
+    "icon2": "mdi:package-variant"
+                },
+  {
+    "title": "rôzne pružiny z pásky, i kusovo podľa vzoru",
+    "description":
+     "",
+    "icon": "bx:bxs-package",
+    "icon2": "mdi:package-variant"
+                },
+  {
+    "title": "objímky",
+    "description":
+      "",
+    "icon": "bx:bxs-package",
+    "icon2": "mdi:package-variant"
+                } 
+              
+              
+              ]  
 
   }
      
